@@ -1,3 +1,6 @@
- All class definitions will have at a minimum: 1) a default constructor (zero params), 2) an overloaded constructor(all data member params), 3) getter and setter methods (two methods per data member one to "set" the value and one to "get" the value)
+ All class definitions will have at a minimum: 
+1) a default constructor (zero params), 
+2) an overloaded constructor(all data member params), 
+3) getter and setter methods (two methods per data member one to "set" the value and one to "get" the value)
 
 Any other methods or constructors will be based on what you see in the usage.
