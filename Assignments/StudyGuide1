@@ -5,6 +5,13 @@ All class definitions will have at a minimum:
 
 Any other methods or constructors will be based on what you see in the usage.
 
-Encapsulation: The packaging of data and methods together in the same construct which allows us to hide some of the inner goings on from the world.
-Inheritance: Defining a set of classes in a hierarchical manner so that as we move down the hierarchy the classes below can re-use the data and methods from the classes above. And by adding or changing things in a small way we can quickly change the behavior of a lower class without lots of effort or code.
-Polymorphism: Changing the behavior of a class by overloading or overriding methods from a class higher in the hierarchy to change the behavior of that higher class. Basically this means we can alter the behavior or adapt the behavior of a data type based on the context in which its used.
+Encapsulation: The packaging of data and methods together in the same construct which allows us to hide some of the inner
+goings on from the world.
+
+Inheritance: Defining a set of classes in a hierarchical manner so that as we move down the hierarchy the classes below 
+can re-use the data and methods from the classes above. And by adding or changing things in a small way we can quickly
+change the behavior of a lower class without lots of effort or code.
+
+Polymorphism: Changing the behavior of a class by overloading or overriding methods from a class higher in the hierarchy to 
+change the behavior of that higher class. Basically this means we can alter the behavior or adapt the behavior of a data 
+type based on the context in which its used.
