@@ -13,5 +13,5 @@ go ahead and proceed with the calculations, along with a function that will chan
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
 |   1   | Main.cpp         | Main driver of my project that runs the program     |
-|   2   | data.txt  | The input file          |
-|   3   | output. | The program sends the output onto this file |
+|   2   | data.txt  | This contains the input that the program will read        |
+|   3   | output.txt | The program prints the result into this file |
