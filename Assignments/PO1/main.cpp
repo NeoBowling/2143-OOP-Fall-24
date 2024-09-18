@@ -22,7 +22,7 @@
 * 
 *  Files:
         data.txt            (input file)
-        FractionsOOP2.cpp   ()
+        Main.cpp            (driver file)
         output.txt          (Output file)
 *****************************************************************************/
 #include <iostream>
