@@ -21,9 +21,9 @@
 *        The result will be printed into the output file after the program is done running 
 * 
 *  Files:
-        data.txt
-        FractionsOOP2.cpp
-        output.txt 
+        data.txt            (input file)
+        FractionsOOP2.cpp   ()
+        output.txt          (Output file)
 *****************************************************************************/
 #include <iostream>
 #include <fstream>
