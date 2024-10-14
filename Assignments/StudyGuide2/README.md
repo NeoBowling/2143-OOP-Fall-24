@@ -4,21 +4,21 @@ Which of the following functions demonstrates function overloading in the code s
 Which of the following functions demonstrates function overriding in the code snippet?
 Class Wizard is ___ the print method in Character
 The Print method is ___ in class Character
-How can we make a class abstract?
+How can we make a class abstract? - A class that has a method defined as pure virtual (A method with no implementation. =0)
 Which of the following is true about the friend keyword in C++?
-Which of the following is a potential drawback of using the friend keyword?
+Which of the following is a potential drawback of using the friend keyword? - Breaks Encapsulation
 Which of the following statement is correct with respect to the use of friend keyword inside a class?
-Which of the following keywords is used to control access to a class member?
-Like private members, protected members are inaccessible outside of the class. However, they can be accessed by?
-What is the purpose of an abstract class in C++?
-Given a class Widget, which of the following choices could access private data members or private member functions of Widget.
-Which of the following type of data member can be shared by all instances of its class?
-An object is a(n) \fillin of a class that resides in \fillin and has \fillin.
-A constructor is executed when ___?
-How many objects can be created from an abstract class?
+Which of the following keywords is used to control access to a class member? Public, Private, Protected 
+Like private members, protected members are inaccessible outside of the class. However, they can be accessed by? Friend, child classes, print methods
+What is the purpose of an abstract class in C++? To make sure that each subset class has to implement a base function.
+Given a class Widget, which of the following choices could access private data members or private member functions of Widget. - friend
+Which of the following type of data member can be shared by all instances of its class? - Static data member 
+An object is a(n) \fillin of a class that resides in \fillin and has \fillin. - Instance, resides in memory and has state
+A constructor is executed when ___? - You make an instance of an object
+How many objects can be created from an abstract class? - As many as you want as long as 
 What does the class definitions in the following code represent?
-Which of the following can be overloaded?
-Which of the following means "The use of an object of one class in the definition of another class"?
+Which of the following can be overloaded? - Just think about writing another function with the same name and a different parameter list 
+Which of the following means "The use of an object of one class in the definition of another class"? - Inheritance 
 Which of the following is the only technical difference between structures and classes in C++?
 Which of the following concepts means "determine at runtime" what method to invoke?
 In the code snippet below, we have an example of:
