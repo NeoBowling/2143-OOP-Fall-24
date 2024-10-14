@@ -132,9 +132,9 @@ Short Answer. Write a simple example in Python (using class names like A, B, and
 Given the code in snippet 2, write a class called Customer that can access both the account_number AND the account_balance if possible. If not explain why and make any fixes necessary to Account.
 Short Answer. Explain and write an example in C++ describing the diamond problem and how to fix and/or avoid it.
 
-### Major Topics
-## Overloading
-## Overriding 
-## Composition/inheritance 
-## Virtual
-## Access specifiers 
+## Major Topics
+### Overloading
+### Overriding 
+### Composition/inheritance 
+### Virtual / Pure virtual 
+### Access specifiers 
