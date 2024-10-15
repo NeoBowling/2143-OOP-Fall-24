@@ -1,10 +1,10 @@
-Like private members, protected members are inaccessible outside of the class. However, they can be accessed by derived classes and friend classes/functions.?\
-Write a single C++ statement that dynamically allocates a single int and initializes it to 99.
-Which of the following functions demonstrates function overloading in the code snippet?
-Which of the following functions demonstrates function overriding in the code snippet?
-Class Wizard is ___ the print method in Character
-The Print method is ___ in class Character
-How can we make a class abstract? - A class that has a method defined as pure virtual (A method with no implementation. =0)
+1. Like private members, protected members are inaccessible outside of the class. However, they can be accessed by derived classes and friend classes/functions.?\
+2. Write a single C++ statement that dynamically allocates a single int and initializes it to 99.
+3. Which of the following functions demonstrates function overloading in the code snippet?
+4. Which of the following functions demonstrates function overriding in the code snippet?
+5. Class Wizard is ___ the print method in Character
+6. The Print method is ___ in class Character
+7. How can we make a class abstract? - A class that has a method defined as pure virtual (A method with no implementation. =0)
 Which of the following is true about the friend keyword in C++?
 Which of the following is a potential drawback of using the friend keyword? - Breaks Encapsulation
 Which of the following statement is correct with respect to the use of friend keyword inside a class?
@@ -91,10 +91,10 @@ The concept portrayed in the previous snippet is known as
  ? (choose the best answer)\
 What is the output of the previous code snippet?\
 Depending on your previous answer, is there anything you could do to either make it work (if you thought it was broken) or make it print the "other" output without altering main?\ \question Encapsulation v Abstraction: Use the answer sheet to answer. label each question with an A for abstraction or E for encapsulation.
-Hides certain methods from users of the class by protecting them or making them private.
+Hides certain methods from users of the class by protecting them or making them private. Data Specifiers, Private/ Protected keywords
 Hides whether an array or linked list is used.
 Solves problem at implementation level.
-Wraps code and data together.
+Wraps code and data together. - Class
 Is focused mainly on what should be done.
 Is focused on how it should be done.
 Helps developers to design projects more easily.
@@ -132,6 +132,7 @@ Short Answer. Write a simple example in Python (using class names like A, B, and
 Given the code in snippet 2, write a class called Customer that can access both the account_number AND the account_balance if possible. If not explain why and make any fixes necessary to Account.
 Short Answer. Explain and write an example in C++ describing the diamond problem and how to fix and/or avoid it.
 
+Diffeent kinds of inheritance
 ## Major Topics
 ### Overloading
 ### Overriding 
