@@ -139,3 +139,4 @@ Diffeent kinds of inheritance
 ### Composition/inheritance 
 ### Virtual / Pure virtual 
 ### Access specifiers 
+#### Public remain public when derived/inheritance, Protected stays protected in the derived class, private stays private no matter what. 
