@@ -5,29 +5,29 @@
 5. Class Wizard is ___ the print method in Character
 6. The Print method is ___ in class Character
 7. How can we make a class abstract? - A class that has a method defined as pure virtual (A method with no implementation. =0)
-Which of the following is true about the friend keyword in C++?
-Which of the following is a potential drawback of using the friend keyword? - Breaks Encapsulation
-Which of the following statement is correct with respect to the use of friend keyword inside a class?
-Which of the following keywords is used to control access to a class member? Public, Private, Protected 
-Like private members, protected members are inaccessible outside of the class. However, they can be accessed by? Friend, child classes, print methods
-What is the purpose of an abstract class in C++? To make sure that each subset class has to implement a base function.
-Given a class Widget, which of the following choices could access private data members or private member functions of Widget. - friend
-Which of the following type of data member can be shared by all instances of its class? - Static data member 
-An object is a(n) \fillin of a class that resides in \fillin and has \fillin. - Instance, resides in memory and has state
-A constructor is executed when ___? - You make an instance of an object
-How many objects can be created from an abstract class? - As many as you want as long as 
-What does the class definitions in the following code represent?
-Which of the following can be overloaded? - Just think about writing another function with the same name and a different parameter list 
-Which of the following means "The use of an object of one class in the definition of another class"? - Composition 
-Which of the following is the only technical difference between structures and classes in C++? - Structures are public and classes are private
-Which of the following concepts means "determine at runtime" what method to invoke?
-In the code snippet below, we have an example of:
-In the snippet below, if I wanted to make Character an abstract class, I would have to:
-Which of the following can be an object:
-A class that has all of its methods implemented, and can be instantiated is know as a(n):
-What is the one thing that is necessary for run time polymorphism?
-Runtime Polymorphism requires?
-We typically choose Inheritance over Composition?
+8. Which of the following is true about the friend keyword in C++?
+9. Which of the following is a potential drawback of using the friend keyword? - Breaks Encapsulation
+10. Which of the following statement is correct with respect to the use of friend keyword inside a class?
+11. Which of the following keywords is used to control access to a class member? Public, Private, Protected 
+12. Like private members, protected members are inaccessible outside of the class. However, they can be accessed by? Friend, child classes, print methods
+13. What is the purpose of an abstract class in C++? To make sure that each subset class has to implement a base function.
+14. Given a class Widget, which of the following choices could access private data members or private member functions of Widget. - friend
+15. Which of the following type of data member can be shared by all instances of its class? - Static data member 
+16. An object is a(n) \fillin of a class that resides in \fillin and has \fillin. - Instance, resides in memory and has state
+17. A constructor is executed when ___? - You make an instance of an object
+18. How many objects can be created from an abstract class? - As many as you want as long as 
+19. What does the class definitions in the following code represent?
+20. Which of the following can be overloaded? - Just think about writing another function with the same name and a different parameter list 
+21. Which of the following means "The use of an object of one class in the definition of another class"? - Composition 
+22. Which of the following is the only technical difference between structures and classes in C++? - Structures are public and classes are private
+23. Which of the following concepts means "determine at runtime" what method to invoke?
+24. In the code snippet below, we have an example of:
+25. In the snippet below, if I wanted to make Character an abstract class, I would have to:
+26. Which of the following can be an object:
+27. A class that has all of its methods implemented, and can be instantiated is know as a(n):
+28. What is the one thing that is necessary for run time polymorphism?
+29. Runtime Polymorphism requires?
+30. We typically choose Inheritance over Composition?
 When a derived class inherits from more than one base-class directly, we call this?
 The concept of determining which methods to invoke while a program is executing is known as:\
 The concept of determining which methods to invoke before a program is executing is known as:
