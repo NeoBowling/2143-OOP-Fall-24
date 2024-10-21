@@ -27,7 +27,11 @@
 27. A class that has all of its methods implemented, and can be instantiated is know as a(n): Concrete Class 
 28. What is the one thing that is necessary for run time polymorphism? - a virtual function 
 29. Runtime Polymorphism requires? - a base class pointer or reference and virtual functions
-30. We typically choose Inheritance over Composition? we typically choose composition over inheritance 
+30. We typically choose Inheritance over Composition? we typically choose composition over inheritance
+31. When a derived class inherits from more than one base-class directly, we call this?
+32. The concept of determining which methods to invoke while a program is executing is known as: Runtime Polymorphism (or Dynamic Binding).
+33. The concept of determining which methods to invoke before a program is executing is known as: Compile-time polymorphism or static binding 
+34. Write a single C++ statement that dynamically allocates a single int and initializes it to 7. int* ptr = new int(7)
 35. Rewrite the snippet below so that the Kid can access his dad private stash of alcohol. The alcohol attribute must stay private.
 36. Finish the Character class so that the print method in Character must be implemented in both sub-classes.
 37. Add necessary code to snippet below, to ensure it works without error. You cannot change any code, you must add additional code. Simplest answer gets the most points.
@@ -42,7 +46,7 @@
 84. Which of the following is a mechanism of static polymorphism?
 85. Rewrite the snippet above so that the Kid can access his dad private stash of alcohol.
 86. Rewrite the code snippet from question 17, so that it can properly use run time polymorphism.
-87. Like private members, protected members are inaccessible outside of the class. However, they can be accessed by derived classes and friend classes/functions.?
+87. Like private members, protected members are inaccessible outside of the class. However, they can be accessed by derived classes and friend classes/functions.? True 
 88. Which of these is a base class: Vehicle or Minivan? vehicle 
 89. Like private members, protected members are inaccessible outside of the class. However, they can be accessed by:
 90. The concept portrayed in the previous snippet is known as 
