@@ -114,3 +114,7 @@ You hit the backspace: true
 You hit the backspace: true
 You clicked at x,y:: [64, 3]
 Mouse clicked: [64, 3]
+height x width: [11, 128]
+You clicked at x,y:: [14, 4]
+Mouse clicked: [14, 4]
+You hit the enter key: true
