@@ -14,7 +14,7 @@ go ahead and proceed with the calculations, along with a function that will chan
 | :---: | --------------- | -------------------------------------------------- |
 |   1   | KnuckleBones.cpp        | some code necessary to run the knucklebones game    |
 |   2   | color_class.hpp	| Use to easily make color pairs and use colors. |
-|   3   | dice_class.hpp | Animate a cheesy dice square (rectangle). |
+|   3   | diceClass.hpp | Animate a   dice square (rectangle). |
 |   4   |	game.cpp | Example usage of helper classes. |
 |   5   |	grid_class.hpp |	Where you place dice values. |
 |   6   |	button_class.hpp |	Use to add a button to your game. |
