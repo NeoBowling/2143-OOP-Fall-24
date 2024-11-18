@@ -7,7 +7,7 @@ This program is a simulation of the dice-based game "Knucklebones." It includes 
 ### Files 
 |   #   | File            | Description                                        |
 | :---: | --------------- | -------------------------------------------------- |
-|   1   | KnuckleBones.cpp        | some code necessary to run the knucklebones game    |
+|   1   | KnuckleBones.cpp        | My attempt at making the necessary game class to play knucklebones game    |
 |   2   | color_class.hpp	| Use to easily make color pairs and use colors. |
 |   3   | diceClass.hpp | Animate a   dice square (rectangle). |
 |   4   |	game.cpp | Example usage of helper classes. |
