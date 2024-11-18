@@ -15,6 +15,6 @@ This program is a simulation of the dice-based game "Knucklebones." It includes 
 |   6   |	button_class.hpp |	Use to add a button to your game. |
 |   7   |	input_class.hpp |	Use to manage input |
 |   8   |	logger_class.hpp |	Class to assist logging debug statements. |
-|   
+
 
 
