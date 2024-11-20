@@ -2,9 +2,8 @@
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(800, 600), "SFML Test Window");
-    sf::CircleShape shape(100.f
-    );
-    shape.setFillColor(sf::Color::Green);
+    sf::CircleShape shape(50.f);
+    shape.setFillColor(sf::Color::Red);
 
     while (window.isOpen()) {
         sf::Event event;
