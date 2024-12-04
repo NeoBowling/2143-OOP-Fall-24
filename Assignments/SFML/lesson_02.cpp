@@ -15,17 +15,17 @@ int main() {
     circle.setFillColor(sf::Color::Green);
     circle.setPosition(400.f, 100.f);
 
-    // // Load a texture
-    // sf::Texture texture;
-    // if (!texture.loadFromFile("./images/1.png")) {
-    //     std::cerr << "Error: Could not load texture 'dice_face.png'\n";
-    //     return -1;
-    // }
+    // Load a texture
+    sf::Texture texture;
+    if (!texture.loadFromFile("./Images/1.png")) {
+        std::cerr << "Error: Could not load texture '1.png'\n";
+        return -1;
+    }
 
-    // // Create a sprite to display the texture
-    // sf::Sprite sprite;
-    // sprite.setTexture(texture);
-    // sprite.setPosition(300.f, 300.f);  // Set sprite position
+    // Create a sprite to display the texture
+    sf::Sprite sprite;
+    sprite.setTexture(texture);
+    sprite.setPosition(300.f, 300.f);  // Set sprite position
 
     // Main game loop
     while (window.isOpen()) {
