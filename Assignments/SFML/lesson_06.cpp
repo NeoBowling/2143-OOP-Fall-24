@@ -12,7 +12,7 @@ int main() {
 
     // Menu text
     sf::Font font;
-    if (!font.loadFromFile("Arial.ttf")) {
+    if (!font.loadFromFile("./font/Arial.ttf")) {
         std::cerr << "Error loading font\n";
         return -1;
     }

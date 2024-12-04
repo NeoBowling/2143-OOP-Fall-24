@@ -12,7 +12,7 @@ int main() {
 
     // Load font
     sf::Font font;
-    if (!font.loadFromFile("Arial.ttf")) {
+    if (!font.loadFromFile("./font/Arial.ttf")) {
         // Handle error
         return -1;
     }
