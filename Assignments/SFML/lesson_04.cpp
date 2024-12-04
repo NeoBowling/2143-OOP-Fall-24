@@ -26,7 +26,7 @@ int main() {
 
     // Timing variables
     sf::Clock clock;
-    const sf::Time frameDuration = sf::milliseconds(5);  // 200ms per frame
+    const sf::Time frameDuration = sf::milliseconds(50);  // 200ms per frame
     size_t currentFrame          = 0;
 
     // Main game loop
