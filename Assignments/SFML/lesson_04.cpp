@@ -10,7 +10,7 @@ int main() {
     for (int i = 1; i <= 24; ++i) {  // Assume dice frames are named frame1.png to frame6.png
         sf::Texture texture;
         std::string filename = (i < 10) ? "00" + std::to_string(i) + ".png" : "0" + std::to_string(i) + ".png";
-        if (!texture.loadFromFile("./images/frame_" + filename)) {
+        if (!texture.loadFromFile(".media/images/frame_" + filename)) {
             // if (!texture.loadFromFile("./images/" + std::to_string(i) + ".png")) {
             std::cerr << "Error loading frame" << i << ".png" << std::endl;
             return -1;
