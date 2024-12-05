@@ -39,5 +39,5 @@ $CXX ${CXXFLAGS} "${SOURCE_FILES[@]}" -o "${OUTPUT}" ${LDFLAGS}
 if [ $? -eq 0 ]; then
     echo "Compilation successful: ./${OUTPUT}"
 else
-    echo "Compilation failed."
+    echo "Compilation failed." 
 fi
