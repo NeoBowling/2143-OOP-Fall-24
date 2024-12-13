@@ -3,22 +3,24 @@
 #include <iostream>
 
 class Game {
-public:
-    Game();
-    void run();
-
 private:
+    private:
     sf::RenderWindow window;
     sf::Font font;
     sf::Text welcomeText, instructionText, usernamePrompt, usernameText;
     sf::Music music;
     std::string username;
-    
+
     void loadAssets();
     void handleWelcomeScreen();
     void handleUsernameInput();
     void handleMainMenu();
     void render();
+    
+    public:
+    Game();
+    ~Game();
+    void run();
 };
 
 Game::Game() : window(sf::VideoMode(800, 600), "Knuckle Bones") {
@@ -26,15 +28,17 @@ Game::Game() : window(sf::VideoMode(800, 600), "Knuckle Bones") {
 }
 
 void Game::loadAssets() {
+    
     if (!font.loadFromFile("media/fonts/arial.ttf")) {
-        std::cerr << "Error loading font!" << std::endl;
-        exit(EXIT_FAILURE);
+        std::cerr << "Error loading font! Ensure 'media/fonts/arial.ttf' exists and is accessible." << std::endl;
+        window.close();
     }
 
     if (!music.openFromFile("media/music/Music.mp3")) {
-        std::cerr << "Error loading music!" << std::endl;
-        exit(EXIT_FAILURE);
+        std::cerr << "Error loading music! Ensure 'media/music/Music.mp3' exists and is accessible." << std::endl;
+        window.close();
     }
+
 
     // Welcome Text
     welcomeText.setFont(font);
@@ -140,9 +144,16 @@ void Game::render() {
     window.draw(usernameText);
     window.display();
 }
-
+Game::~Game() {
+    music.stop();
+}
 int main() {
-    Game game;
-    game.run();
-    return 0;
+    try {
+        Game game;
+        game.run();
+    } catch (const std::exception &e) {
+        std::cerr << "An error occurred: " << e.what() << std::endl;
+        return EXIT_FAILURE;
+    }
+    return EXIT_SUCCESS;
 }
