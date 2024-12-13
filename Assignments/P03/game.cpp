@@ -31,7 +31,7 @@ void Game::loadAssets() {
         exit(EXIT_FAILURE);
     }
 
-    if (!music.openFromFile("media/music/background.ogg")) {
+    if (!music.openFromFile("media/music/Music.mp3")) {
         std::cerr << "Error loading music!" << std::endl;
         exit(EXIT_FAILURE);
     }
