@@ -39,8 +39,18 @@ void Game::loadAssets() {
         window.close();
     }
 
-    if (!music.openFromFile("media/music/Music.ogg")) {
+    if (!backgroundmusic.openFromFile("media/music/Music.ogg")) {
         std::cerr << "Error loading music!" << std::endl;
+        window.close();
+    }
+
+    if (!dieroll.openFromFile("media/music/dieroll.ogg")) {
+        std::cerr << "Error loading dieroll sound effect!" << std::endl;
+        window.close();
+    }
+
+    if (!StartUpSound.openFromFile("media/music/dieroll.ogg")) {
+        std::cerr << "Error loading dieroll sound effect!" << std::endl;
         window.close();
     }
 
