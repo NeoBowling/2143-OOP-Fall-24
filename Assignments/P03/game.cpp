@@ -29,22 +29,37 @@ Game::Game() : window(sf::VideoMode(800, 600), "Knuckle Bones") {
 
 void Game::loadAssets() {
     
-    if (!font.loadFromFile("media/font/Arial.ttf")) {
-        std::cerr << "Error loading font! Ensure 'media/fonts/arial.ttf' exists and is accessible." << std::endl;
+    if (!font1.loadFromFile("media/font/Blacknorth.otf")) {
+        std::cerr << "Error loading font1!" << std::endl;
         window.close();
     }
 
-    if (!music.openFromFile("media/music/Music.mp3")) {
-        std::cerr << "Error loading music! Ensure 'media/music/Music.mp3' exists and is accessible." << std::endl;
+    if (!font2.loadFromFile("media/font/Blacknorth.otf")) {
+        std::cerr << "Error loading font2!" << std::endl;
         window.close();
     }
+
+    if (!music.openFromFile("media/music/Music.ogg")) {
+        std::cerr << "Error loading music!" << std::endl;
+        window.close();
+    }
+
+
+    sf::SoundBuffer diceRollBuffer;
+        if (!diceRollBuffer.loadFromFile("media/sounds/dice_roll.wav")) {
+        std::cerr << "Error loading dice roll sound!" << std::endl;
+    }
+
+sf::Sound diceRollSound;
+diceRollSound.setBuffer(diceRollBuffer);
+diceRollSound.play();
 
 
     // Welcome Text
-    welcomeText.setFont(font);
+    welcomeText.setFont(font1);
     welcomeText.setString("Welcome to Knuckle Bones!");
     welcomeText.setCharacterSize(48);
-    welcomeText.setFillColor(sf::Color::White);
+    welcomeText.setFillColor(sf::Color::Orange);
     welcomeText.setPosition(200.f, 100.f);
 
     // Instruction Text
