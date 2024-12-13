@@ -16,7 +16,7 @@ private:
     void handleUsernameInput();
     void handleMainMenu();
     void render();
-    
+
     public:
     Game();
     ~Game();
@@ -29,7 +29,7 @@ Game::Game() : window(sf::VideoMode(800, 600), "Knuckle Bones") {
 
 void Game::loadAssets() {
     
-    if (!font.loadFromFile("media/fonts/arial.ttf")) {
+    if (!font.loadFromFile("media/font/Arial.ttf")) {
         std::cerr << "Error loading font! Ensure 'media/fonts/arial.ttf' exists and is accessible." << std::endl;
         window.close();
     }
