@@ -1,154 +1,120 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include <iostream>
+#include "grid.hpp"
 
 class Game {
 private:
-    private:
     sf::RenderWindow window;
     sf::Font font;
-    sf::Text welcomeText, instructionText, usernamePrompt, usernameText;
-    sf::Music music;
-    std::string username;
+    sf::Text welcomeText, instructionText, playButton;
+    sf::RectangleShape rollButton;
+
+    Grid player1Grid;
+    Grid player2Grid;
+
+    bool showMainMenu;
+    bool showGameScreen;
 
     void loadAssets();
     void handleWelcomeScreen();
-    void handleUsernameInput();
     void handleMainMenu();
+    void handleGameScreen();
     void render();
+    void centerText(sf::Text &text);
 
-    public:
+public:
     Game();
-    ~Game();
     void run();
 };
 
-Game::Game() : window(sf::VideoMode(800, 600), "Knuckle Bones") {
+Game::Game() 
+    : window(sf::VideoMode(800, 600), "Knuckle Bones"),
+      player1Grid(3, 3, 80, 50, 150, 10, 2),   // Player 1 grid
+      player2Grid(3, 3, 80, 450, 150, 10, 2),  // Player 2 grid
+      showMainMenu(false), showGameScreen(false) {
     loadAssets();
 }
 
+void Game::centerText(sf::Text &text) {
+    sf::FloatRect bounds = text.getLocalBounds();
+    sf::Vector2u windowSize = window.getSize();
+    text.setOrigin(bounds.width / 2, bounds.height / 2);
+    text.setPosition(windowSize.x / 2, windowSize.y / 2);
+}
+
 void Game::loadAssets() {
-    
-    if (!font1.loadFromFile("media/font/Blacknorth.otf")) {
-        std::cerr << "Error loading font1!" << std::endl;
+    if (!font.loadFromFile("media/font/arial.ttf")) {
+        std::cerr << "Error loading font!" << std::endl;
         window.close();
     }
-
-    if (!font2.loadFromFile("media/font/Blacknorth.otf")) {
-        std::cerr << "Error loading font2!" << std::endl;
-        window.close();
-    }
-
-    if (!backgroundmusic.openFromFile("media/music/Music.ogg")) {
-        std::cerr << "Error loading music!" << std::endl;
-        window.close();
-    }
-
-    if (!dieroll.openFromFile("media/music/dieroll.ogg")) {
-        std::cerr << "Error loading dieroll sound effect!" << std::endl;
-        window.close();
-    }
-
-    if (!StartUpSound.openFromFile("media/music/dieroll.ogg")) {
-        std::cerr << "Error loading dieroll sound effect!" << std::endl;
-        window.close();
-    }
-
-
-    sf::SoundBuffer diceRollBuffer;
-        if (!diceRollBuffer.loadFromFile("media/sounds/dice_roll.wav")) {
-        std::cerr << "Error loading dice roll sound!" << std::endl;
-    }
-
-sf::Sound diceRollSound;
-diceRollSound.setBuffer(diceRollBuffer);
-diceRollSound.play();
-
 
     // Welcome Text
-    welcomeText.setFont(font1);
+    welcomeText.setFont(font);
     welcomeText.setString("Welcome to Knuckle Bones!");
     welcomeText.setCharacterSize(48);
-    welcomeText.setFillColor(sf::Color::Orange);
-    welcomeText.setPosition(200.f, 100.f);
+    welcomeText.setFillColor(sf::Color::White);
+    centerText(welcomeText);
 
     // Instruction Text
     instructionText.setFont(font);
-    instructionText.setString("Press any key to start.");
+    instructionText.setString("Press any key to continue.");
     instructionText.setCharacterSize(24);
     instructionText.setFillColor(sf::Color::Yellow);
-    instructionText.setPosition(250.f, 250.f);
+    instructionText.setPosition(250.f, 300.f);
 
-    // Username prompt
-    usernamePrompt.setFont(font);
-    usernamePrompt.setString("Enter your username:");
-    usernamePrompt.setCharacterSize(30);
-    usernamePrompt.setFillColor(sf::Color::White);
-    usernamePrompt.setPosition(150.f, 200.f);
+    // Play Button
+    playButton.setFont(font);
+    playButton.setString("Play");
+    playButton.setCharacterSize(36);
+    playButton.setFillColor(sf::Color::White);
+    centerText(playButton);
 
-    // Username text (empty initially)
-    usernameText.setFont(font);
-    usernameText.setCharacterSize(30);
-    usernameText.setFillColor(sf::Color::White);
-    usernameText.setPosition(150.f, 250.f);
+    // Roll Button
+    rollButton.setSize(sf::Vector2f(120.f, 50.f));
+    rollButton.setFillColor(sf::Color::Green);
+    rollButton.setPosition(340.f, 500.f);
 }
 
 void Game::run() {
-    music.setLoop(true);
-    music.play();  // Play background music continuously
     handleWelcomeScreen();
-    handleUsernameInput();
     handleMainMenu();
+    handleGameScreen();
 }
 
 void Game::handleWelcomeScreen() {
-    while (window.isOpen()) {
+    while (window.isOpen() && !showMainMenu) {
         sf::Event event;
         while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed) {
                 window.close();
-            }
-            if (event.type == sf::Event::KeyPressed) {
-                return; // Proceed to username input
+            } else if (event.type == sf::Event::KeyPressed) {
+                showMainMenu = true;
             }
         }
-        render();
-    }
-}
 
-void Game::handleUsernameInput() {
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-            if (event.type == sf::Event::TextEntered) {
-                if (event.text.unicode == 13) {  // Enter key pressed
-                    return; // Proceed to game menu
-                }
-                if (event.text.unicode == 8 && !username.empty()) {  // Backspace pressed
-                    username.pop_back();
-                } else if (event.text.unicode < 128) {
-                    username += static_cast<char>(event.text.unicode);
-                }
-                usernameText.setString(username);
-            }
-        }
         render();
     }
 }
 
 void Game::handleMainMenu() {
-    // Main menu options: Play Locally, Play vs Computer
-    // You could add buttons and other interactive elements here later
-    sf::Text menuText;
-    menuText.setFont(font);
-    menuText.setString("Main Menu:\n1. Play Locally\n2. Play vs Computer");
-    menuText.setCharacterSize(30);
-    menuText.setFillColor(sf::Color::Yellow);
-    menuText.setPosition(250.f, 200.f);
+    while (window.isOpen() && !showGameScreen) {
+        sf::Event event;
+        while (window.pollEvent(event)) {
+            if (event.type == sf::Event::Closed) {
+                window.close();
+            } else if (event.type == sf::Event::MouseButtonPressed) {
+                if (playButton.getGlobalBounds().contains(sf::Mouse::getPosition(window).x, sf::Mouse::getPosition(window).y)) {
+                    showGameScreen = true;
+                }
+            }
+        }
 
+        render();
+    }
+}
+
+void Game::handleGameScreen() {
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -163,22 +129,23 @@ void Game::handleMainMenu() {
 
 void Game::render() {
     window.clear(sf::Color::Black);
-    window.draw(welcomeText);
-    window.draw(instructionText);
-    window.draw(usernamePrompt);
-    window.draw(usernameText);
+
+    if (!showMainMenu) {
+        window.draw(welcomeText);
+        window.draw(instructionText);
+    } else if (!showGameScreen) {
+        window.draw(playButton);
+    } else {
+        player1Grid.draw(window);
+        player2Grid.draw(window);
+        window.draw(rollButton);
+    }
+
     window.display();
 }
-Game::~Game() {
-    music.stop();
-}
+
 int main() {
-    try {
-        Game game;
-        game.run();
-    } catch (const std::exception &e) {
-        std::cerr << "An error occurred: " << e.what() << std::endl;
-        return EXIT_FAILURE;
-    }
-    return EXIT_SUCCESS;
+    Game game;
+    game.run();
+    return 0;
 }
